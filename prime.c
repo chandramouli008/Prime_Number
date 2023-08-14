@@ -17,7 +17,7 @@ int IsPrime(unsigned int num)
 int main()
 {
 
-	int res,num;
+	int num;
 
 	scanf("%d",&num);
 
@@ -25,11 +25,7 @@ int main()
 		printf("prime numbers starts from 2");
 	else
 	{
-		res = IsPrime(num);
-		if(res)
-			printf("its a prime number\n");
-		else
-			printf("its not a prime number\n");
+		IsPrime(num) ? printf("its a prime number\n") : printf("its not a prime number\n");
 	}
 }
 
