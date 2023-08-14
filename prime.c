@@ -1,9 +1,23 @@
 #include<stdio.h>
 
+int IsPrime(unsigned int num)
+{
+	int val;
+	
+	for(val=2;val<=num/2;val++)
+	{
+		if(num%val==0)
+			return 0;
+	}
+	if(val == num)
+		return 1;
+}
+
+
 int main()
 {
 
-	int i,num;
+	int res,num;
 
 	scanf("%d",&num);
 
@@ -11,15 +25,11 @@ int main()
 		printf("prime numbers starts from 2");
 	else
 	{
-		for(i=2;i<num/2;i++)
-		{
-			if(num%i==0)
-			{
-				printf("its not a prime number");
-				return 0;
-			}
-		}
-		printf("its a prime number");
+		res = IsPrime(num);
+		if(res)
+			printf("its a prime number\n");
+		else
+			printf("its not a prime number\n");
 	}
 }
 
